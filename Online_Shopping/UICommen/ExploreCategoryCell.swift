@@ -15,16 +15,16 @@ struct ExploreCategoryCell: View {
     
     var body: some View {
         VStack{
-            WebImage(url: URL(string: cObj.image ))
+            /*WebImage(url: URL(string: cObj.image ))
                 .resizable()
                 .indicator(.activity) // Activity Indicator
                 .transition(.fade(duration: 0.5))
                 .scaledToFit()
-                .frame(width: 120, height: 90)
+                .frame(width: 120, height: 90)*/
         
             Spacer()
             Text(cObj.name)
-                .font(.customfont(.bold, fontSize: 18))
+                .font(.customfont(.bold, fontSize: 20))
                 .foregroundColor(.primaryText)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             
@@ -36,7 +36,7 @@ struct ExploreCategoryCell: View {
         .cornerRadius(16)
         .overlay (
             RoundedRectangle(cornerRadius: 16)
-                .stroke(cObj.color, lineWidth: 1)
+                .stroke(cObj.color, lineWidth: 2)
         )
     }}
 

@@ -13,10 +13,10 @@ struct HomeView: View {
         ZStack{
             ScrollView{
                 VStack{
-                    Image("app_logo_color")
+                    Image("color_logo")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 25)
+                        .frame(width: 50,height: 50)
                                             HStack{
                         Image("location")
                             .resizable()
@@ -37,7 +37,7 @@ struct HomeView: View {
                 .padding(.top, .topInsets)
                 
                 
-                    Image("banner_top")
+                    Image("ULTIMATE ")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 115)             

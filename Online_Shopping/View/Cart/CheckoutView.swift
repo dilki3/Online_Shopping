@@ -10,7 +10,8 @@ import SwiftUI
 struct CheckoutView: View {
     @Binding var isShow: Bool
     @StateObject var cartVM = CartViewModel.shared
-    
+    @State private var showOrderAccepted = false
+
     var body: some View {
         VStack {
             
@@ -277,8 +278,12 @@ struct CheckoutView: View {
               
                 RoundButton(title: "Place Order") {
                        cartVM.serviceCallOrderPlace()
-                    
+                    showOrderAccepted = true
                 }
+                NavigationLink(destination: OrderAccpetView(), isActive: $showOrderAccepted) {
+                    EmptyView()
+                }
+                .hidden()
                 
                 .padding(.bottom, .bottomInsets + 100)
             }

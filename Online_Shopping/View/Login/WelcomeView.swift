@@ -18,11 +18,11 @@ struct WelcomeView: View {
             VStack{
                 Spacer()
                 
-                Image("app_logo_color")
+                Image("shopify")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 60, height: 60)
-                    .padding(.bottom, 8)
+                    .frame(width: 80, height: 80)
+                    .padding(.bottom, 15)
                 
                 Text( "Welcome\nto our store")
                     .font(.customfont(.semibold, fontSize: 48))

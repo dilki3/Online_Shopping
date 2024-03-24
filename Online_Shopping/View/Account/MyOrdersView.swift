@@ -158,7 +158,7 @@ struct MyOrdersView: View {
                     
                     Spacer()
                     
-                    Text("My Ordres")
+                    Text("My Orders")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()

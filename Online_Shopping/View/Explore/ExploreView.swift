@@ -11,25 +11,20 @@ struct ExploreView: View {
     @StateObject var explorVM = ExploreViewModel.shared
     @State var txtSearch: String = ""
     
-    var colums =  [
+    var colums = [
         GridItem(.flexible(), spacing: 15),
         GridItem(.flexible(), spacing: 15)
     ]
     
-    
     var body: some View {
-        ZStack{
-            
-            VStack{
-                HStack{
-                    
+        ZStack {
+            VStack {
+                HStack {
                     Spacer()
-                    
                     Text("Find Products")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()
-                    
                 }
                 .padding(.top, .topInsets)
                 
@@ -39,25 +34,24 @@ struct ExploreView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: colums, spacing: 20) {
-                        ForEach(explorVM.listArr, id: \.id) {
-                            cObj in
-                            NavigationLink(destination:ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: cObj))){
+                        ForEach(explorVM.filteredListArr, id: \.id) { cObj in
+                            NavigationLink(destination: ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: cObj))) {
                                 ExploreCategoryCell(cObj: cObj)
-                                    .aspectRatio(1 ,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .aspectRatio(2, contentMode: .fill)
                             }
-                            }
-                            
                         }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
-                    .padding(.bottom, .bottomInsets + 60)
                 }
-                
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .padding(.bottom, .bottomInsets + 60)
             }
-            
+            .onChange(of: txtSearch) { _ in
+                explorVM.txtSearch = txtSearch
+                explorVM.filterList()
+            }
         }
-    
+    }
 }
 
 #Preview {

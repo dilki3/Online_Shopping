@@ -24,13 +24,11 @@ struct LoginView: View {
             
             VStack{
                 
-                
-                
-                Image("app_logo_color")
+                Image("color_logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 40)
-                    .padding(.bottom, .screenWidth * 0.1)
+                    .frame(width: 60)
+                    .padding(.bottom, 40)
                 
                 
                 Text("Loging")
@@ -53,7 +51,7 @@ struct LoginView: View {
                 
                 
                 NavigationLink {
-                    //ForgotPasswordView()
+                    ForgotPasswordView()
                 } label: {
                     Text("Forgot Password?")
                         .font(.customfont(.medium, fontSize: 14))

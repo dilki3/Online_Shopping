@@ -11,10 +11,13 @@ struct OrderAccpetView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var cartVM = CartViewModel.shared
+    //@State private var navigateToHome = false
     var body: some View {
         ZStack{
             
             VStack{
+                Spacer()
+                Spacer()
                 Spacer()
                 Image("order_accepted")
                     .resizable()
@@ -40,16 +43,24 @@ struct OrderAccpetView: View {
                 RoundButton(title: "Track Order") {
                     
                 }
-                
                 Button {
-                    mode.wrappedValue.dismiss()
+                        mode.wrappedValue.dismiss()
+                        //navigateToHome = true
                 } label: {
-                    Text("Back to home")
-                        .font(.customfont(.semibold, fontSize: 18))
-                        .foregroundColor(.primaryApp)
-                        .padding(.vertical, 15)
+                        Text("Back to home")
+                            .font(.customfont(.semibold, fontSize: 18))
+                            .foregroundColor(.primaryApp)
+                            .padding(.vertical, 15)
                 }
                 .padding(.bottom , .bottomInsets + 15)
+                
+                
+                /*NavigationLink(destination: HomeView(), isActive: $navigateToHome) {
+                    EmptyView()
+                }
+                .hidden()*/
+                
+                
 
             }
             .padding(.horizontal, 20)

@@ -57,7 +57,7 @@ struct AccountView: View {
                             
                             
                             NavigationLink {
-                                //MyDetailsView()
+                                MyDetailsView()
                             } label: {
                                 AccountRow(title: "My Details", icon: "a_my_detail")
                             }
@@ -88,7 +88,7 @@ struct AccountView: View {
                         
                         VStack{
                             NavigationLink {
-                                //NotificationView()
+                                NotificationView()
                             } label: {
                                 AccountRow(title: "Notifications", icon: "a_noitification")
                             }
@@ -104,6 +104,12 @@ struct AccountView: View {
                                     .font(.customfont(.semibold, fontSize: 18))
                                     .foregroundColor(.primaryApp)
                                     .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color.primaryApp, lineWidth: 1) // Adjust the line width as needed
+                                        )
                                 
                                 HStack{
                                     Spacer()
@@ -117,8 +123,8 @@ struct AccountView: View {
                            
                         }
                         .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
-                        .background( Color(hex: "F2F3F2"))
-                        .cornerRadius(20)
+                        //.background( Color(hex: "F2F3F2"))
+                        //.cornerRadius(20)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 15)
                         

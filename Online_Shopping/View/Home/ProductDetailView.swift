@@ -20,9 +20,10 @@ struct ProductDetailView: View {
             ScrollView{
                 ZStack{
                     Rectangle()
-                        .foregroundColor(Color(hex: "F2F2F2"))
+                        .foregroundColor(Color(hex: ""))
                         .frame(width: .screenWidth, height: .screenWidth * 0.8)
                         .cornerRadius(20, corner: [.bottomLeft, .bottomRight])
+                    
                     
                     WebImage(url: URL(string: detailVM.pObj.image))
                         .resizable()
@@ -30,8 +31,10 @@ struct ProductDetailView: View {
                         .transition(.fade(duration: 0.5))
                         .scaledToFit()
                         .frame(width: .screenWidth * 0.8 , height: .screenWidth * 0.8)
+                        //.padding(.top,8)
                 }
                 .frame(width: .screenWidth, height: .screenWidth * 0.9)
+                .padding(.top,25)
                 
                 VStack{
                     HStack{
@@ -96,7 +99,7 @@ struct ProductDetailView: View {
                     Divider()
                 }
                 .padding(.horizontal, 20)
-               // .padding(.vertical, 20)
+                //.padding(.bottom, 50)
                 
                 VStack{
                     HStack{
@@ -277,7 +280,7 @@ struct ProductDetailView: View {
                     }
                     
                 }
-                .padding(20)
+                .padding(10)
                     
                 
             }
@@ -312,6 +315,7 @@ struct ProductDetailView: View {
             }
             .padding(.top, .topInsets)
             .padding(.horizontal, 20)
+            .padding(.bottom,70)
         }
         .alert(isPresented: $detailVM.showError, content: {
             

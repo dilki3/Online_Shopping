@@ -12,10 +12,18 @@ struct MyCartView: View {
     @StateObject var cartVM = CartViewModel.shared
     var body: some View {
         ZStack{
-            
+           
             if(cartVM.listArr.count == 0){
-                Text("Your Cart is Empty")
-                    .font(.customfont(.bold, fontSize: 20))
+                VStack{
+                    Image("hurry")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                        .frame(width: 200, height: 200)
+                    
+                    Text("Your Cart is Empty")
+                        .font(.customfont(.bold, fontSize: 20))
+                }
             }
             
             ScrollView{
@@ -40,6 +48,12 @@ struct MyCartView: View {
                 HStack{
                     
                     Spacer()
+                    Image(systemName: "cart")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.purple)
+                                .padding(.horizontal,3)
                     
                     Text("My Cart")
                         .font(.customfont(.bold, fontSize: 20))

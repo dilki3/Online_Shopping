@@ -21,6 +21,16 @@
 		2E5C107B2BAC1BEA008D7F8E /* OrderItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C107A2BAC1BEA008D7F8E /* OrderItemRow.swift */; };
 		2E5C107D2BAC265E008D7F8E /* OrderItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C107C2BAC265E008D7F8E /* OrderItemModel.swift */; };
 		2E5C107F2BAC491B008D7F8E /* OrderAccpetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C107E2BAC491B008D7F8E /* OrderAccpetView.swift */; };
+		2E5C10812BACA542008D7F8E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10802BACA542008D7F8E /* NotificationViewModel.swift */; };
+		2E5C10832BACA5BE008D7F8E /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10822BACA5BE008D7F8E /* NotificationModel.swift */; };
+		2E5C10852BACA697008D7F8E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10842BACA697008D7F8E /* NotificationView.swift */; };
+		2E5C10872BACA8CA008D7F8E /* MyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10862BACA8CA008D7F8E /* MyDetailsViewModel.swift */; };
+		2E5C10892BACAC08008D7F8E /* MyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10882BACAC08008D7F8E /* MyDetailsView.swift */; };
+		2E5C108B2BACB14C008D7F8E /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C108A2BACB14C008D7F8E /* ChangePasswordView.swift */; };
+		2E5C108D2BACB346008D7F8E /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C108C2BACB346008D7F8E /* ForgotPasswordViewModel.swift */; };
+		2E5C108F2BACB52F008D7F8E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C108E2BACB52F008D7F8E /* ForgotPasswordView.swift */; };
+		2E5C10912BACB584008D7F8E /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10902BACB584008D7F8E /* OTPView.swift */; };
+		2E5C10932BACB79D008D7F8E /* ForgotPasswordSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C10922BACB79D008D7F8E /* ForgotPasswordSetView.swift */; };
 		2E782CA52BA010E50050244D /* Online_ShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E782CA42BA010E50050244D /* Online_ShoppingApp.swift */; };
 		2E782CA92BA010E70050244D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E782CA82BA010E70050244D /* Assets.xcassets */; };
 		2E782CAC2BA010E70050244D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E782CAB2BA010E70050244D /* Preview Assets.xcassets */; };
@@ -95,6 +105,16 @@
 		2E5C107A2BAC1BEA008D7F8E /* OrderItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRow.swift; sourceTree = "<group>"; };
 		2E5C107C2BAC265E008D7F8E /* OrderItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemModel.swift; sourceTree = "<group>"; };
 		2E5C107E2BAC491B008D7F8E /* OrderAccpetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAccpetView.swift; sourceTree = "<group>"; };
+		2E5C10802BACA542008D7F8E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		2E5C10822BACA5BE008D7F8E /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		2E5C10842BACA697008D7F8E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2E5C10862BACA8CA008D7F8E /* MyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsViewModel.swift; sourceTree = "<group>"; };
+		2E5C10882BACAC08008D7F8E /* MyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsView.swift; sourceTree = "<group>"; };
+		2E5C108A2BACB14C008D7F8E /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		2E5C108C2BACB346008D7F8E /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		2E5C108E2BACB52F008D7F8E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		2E5C10902BACB584008D7F8E /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		2E5C10922BACB79D008D7F8E /* ForgotPasswordSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordSetView.swift; sourceTree = "<group>"; };
 		2E782CA12BA010E50050244D /* Online_Shopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Online_Shopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E782CA42BA010E50050244D /* Online_ShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Online_ShoppingApp.swift; sourceTree = "<group>"; };
 		2E782CA82BA010E70050244D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,6 +274,7 @@
 				2E5B10022BAB2AFB0093996A /* PaymentModel.swift */,
 				2E5C10742BABFF1D008D7F8E /* MyOrderModel.swift */,
 				2E5C107C2BAC265E008D7F8E /* OrderItemModel.swift */,
+				2E5C10822BACA5BE008D7F8E /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +294,9 @@
 				2E5B10002BAB2AA40093996A /* PaymentViewModel.swift */,
 				2E5C10722BABFE50008D7F8E /* MyOrdersViewModel.swift */,
 				2E5C10762BAC0ED3008D7F8E /* MyOrderDetailViewModel.swift */,
+				2E5C10802BACA542008D7F8E /* NotificationViewModel.swift */,
+				2E5C10862BACA8CA008D7F8E /* MyDetailsViewModel.swift */,
+				2E5C108C2BACB346008D7F8E /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -309,6 +333,9 @@
 				2E782CC92BA058FF0050244D /* WelcomeView.swift */,
 				2E782CCB2BA059140050244D /* SignInView.swift */,
 				2E782CE52BA0AE100050244D /* SignUpView.swift */,
+				2E5C108E2BACB52F008D7F8E /* ForgotPasswordView.swift */,
+				2E5C10902BACB584008D7F8E /* OTPView.swift */,
+				2E5C10922BACB79D008D7F8E /* ForgotPasswordSetView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -368,6 +395,9 @@
 				2E5B10082BAB37D60093996A /* AddPaymentMethodView.swift */,
 				2E5C10702BABFE06008D7F8E /* MyOrdersView.swift */,
 				2E5C10782BAC122B008D7F8E /* MyOrdersDetailView.swift */,
+				2E5C10842BACA697008D7F8E /* NotificationView.swift */,
+				2E5C10882BACAC08008D7F8E /* MyDetailsView.swift */,
+				2E5C108A2BACB14C008D7F8E /* ChangePasswordView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -458,13 +488,17 @@
 				2E782CBD2BA0583B0050244D /* RoundButton.swift in Sources */,
 				2EFDB13A2BA9A0D400B36200 /* CartViewModel.swift in Sources */,
 				2E782CC12BA058740050244D /* LineTextField.swift in Sources */,
+				2E5C108B2BACB14C008D7F8E /* ChangePasswordView.swift in Sources */,
 				2E5C10732BABFE50008D7F8E /* MyOrdersViewModel.swift in Sources */,
 				2EFDB13F2BA9A52500B36200 /* MyCartView.swift in Sources */,
+				2E5C10872BACA8CA008D7F8E /* MyDetailsViewModel.swift in Sources */,
 				2EFDB1282BA6F13600B36200 /* FavouriteView.swift in Sources */,
+				2E5C108F2BACB52F008D7F8E /* ForgotPasswordView.swift in Sources */,
 				2EFDB1322BA85C1C00B36200 /* ExploreCategoryModel.swift in Sources */,
 				2EFDB1482BAA0DF100B36200 /* AccountRow.swift in Sources */,
 				2E782CC32BA058880050244D /* ServiceCall.swift in Sources */,
 				2E5B100B2BAB4F620093996A /* CheckoutView.swift in Sources */,
+				2E5C10832BACA5BE008D7F8E /* NotificationModel.swift in Sources */,
 				2E782D062BA302810050244D /* HomeViewModel.swift in Sources */,
 				2E782CB92BA0580A0050244D /* UIKitExtension.swift in Sources */,
 				2E782D0A2BA304220050244D /* HomeView.swift in Sources */,
@@ -483,15 +517,19 @@
 				2E5C107F2BAC491B008D7F8E /* OrderAccpetView.swift in Sources */,
 				2E782CF42BA1698F0050244D /* ExploreView.swift in Sources */,
 				2EFDB13C2BA9A0FE00B36200 /* CartItemModel.swift in Sources */,
+				2E5C10852BACA697008D7F8E /* NotificationView.swift in Sources */,
+				2E5C10932BACB79D008D7F8E /* ForgotPasswordSetView.swift in Sources */,
 				2E782D082BA3032A0050244D /* MainTabView.swift in Sources */,
 				2E782CE82BA0D29D0050244D /* UserModel.swift in Sources */,
 				2EFDB1542BAAFC5800B36200 /* PromoCodeModel.swift in Sources */,
 				2EFDB14C2BAA117400B36200 /* DeliveryAddressViewModel.swift in Sources */,
 				2EFDB1432BA9C85E00B36200 /* ExploreItemsView.swift in Sources */,
+				2E5C10892BACAC08008D7F8E /* MyDetailsView.swift in Sources */,
 				2E782CF62BA16E120050244D /* TabButton.swift in Sources */,
 				2EFDB1522BAAFB1300B36200 /* PromoCodeViewModel.swift in Sources */,
 				2E782CE62BA0AE100050244D /* SignUpView.swift in Sources */,
 				2E5C10792BAC122B008D7F8E /* MyOrdersDetailView.swift in Sources */,
+				2E5C108D2BACB346008D7F8E /* ForgotPasswordViewModel.swift in Sources */,
 				2E782CBB2BA058240050244D /* UIExtension.swift in Sources */,
 				2E5B10072BAB35810093996A /* PaymentMethodsView.swift in Sources */,
 				2E782CFA2BA192860050244D /* SectionTitleAll.swift in Sources */,
@@ -508,12 +546,14 @@
 				2EFDB12E2BA85B1700B36200 /* ExploreViewModel.swift in Sources */,
 				2E5C107D2BAC265E008D7F8E /* OrderItemModel.swift in Sources */,
 				2E782CC72BA058D50050244D /* MainViewModel.swift in Sources */,
+				2E5C10912BACB584008D7F8E /* OTPView.swift in Sources */,
 				2E782D162BA596740050244D /* ProductDetailViewModel.swift in Sources */,
 				2EFDB1502BAAD25F00B36200 /* AddDeliveryAddressView.swift in Sources */,
 				2EFDB14A2BAA0F8900B36200 /* DeliveryAddressView.swift in Sources */,
 				2EFDB1412BA9BD4900B36200 /* CartItemRow.swift in Sources */,
 				2E5C10752BABFF1D008D7F8E /* MyOrderModel.swift in Sources */,
 				2E5B10032BAB2AFB0093996A /* PaymentModel.swift in Sources */,
+				2E5C10812BACA542008D7F8E /* NotificationViewModel.swift in Sources */,
 				2E782D182BA5BDA20050244D /* ImageModel.swift in Sources */,
 				2E5C10772BAC0ED3008D7F8E /* MyOrderDetailViewModel.swift in Sources */,
 				2EFDB1342BA85DF200B36200 /* ExploreCategoryCell.swift in Sources */,
@@ -653,7 +693,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Online-Shopping-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = ShopiX;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -686,7 +726,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Online-Shopping-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = ShopiX;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

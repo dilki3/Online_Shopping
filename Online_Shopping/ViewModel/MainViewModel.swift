@@ -32,7 +32,7 @@ class MainViewModel: ObservableObject {
         #if DEBUG
         txtUsername = "Mike"
         txtEmail = "mike22@gmail.com"
-        txtPassword = "1234"
+        txtPassword = "123456"
         #endif
         
     }

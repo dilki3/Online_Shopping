@@ -28,8 +28,8 @@ struct SignUpView: View {
                     Image("color_logo")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40)
-                        .padding(.bottom, .screenWidth * 0.1)
+                        .frame(width: 60)
+                        .padding(.bottom, .screenWidth * 0.04)
                     
                     
                     Text("Sign Up")
