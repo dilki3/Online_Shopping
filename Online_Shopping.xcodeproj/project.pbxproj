@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4DA2ED2BB058850014C1D9 /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DA2EC2BB058850014C1D9 /* OfferView.swift */; };
 		2E5B0FFF2BAB178C0093996A /* PromoCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B0FFE2BAB178C0093996A /* PromoCodeView.swift */; };
 		2E5B10012BAB2AA40093996A /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B10002BAB2AA40093996A /* PaymentViewModel.swift */; };
 		2E5B10032BAB2AFB0093996A /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B10022BAB2AFB0093996A /* PaymentModel.swift */; };
@@ -91,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4DA2EC2BB058850014C1D9 /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		2E5B0FFE2BAB178C0093996A /* PromoCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeView.swift; sourceTree = "<group>"; };
 		2E5B10002BAB2AA40093996A /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		2E5B10022BAB2AFB0093996A /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			children = (
 				2E782D092BA304220050244D /* HomeView.swift */,
 				2E782D132BA594370050244D /* ProductDetailView.swift */,
+				2E4DA2EC2BB058850014C1D9 /* OfferView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				2E782D0E2BA3266A0050244D /* CategoryCell.swift in Sources */,
 				2E5C107F2BAC491B008D7F8E /* OrderAccpetView.swift in Sources */,
 				2E782CF42BA1698F0050244D /* ExploreView.swift in Sources */,
+				2E4DA2ED2BB058850014C1D9 /* OfferView.swift in Sources */,
 				2EFDB13C2BA9A0FE00B36200 /* CartItemModel.swift in Sources */,
 				2E5C10852BACA697008D7F8E /* NotificationView.swift in Sources */,
 				2E5C10932BACB79D008D7F8E /* ForgotPasswordSetView.swift in Sources */,

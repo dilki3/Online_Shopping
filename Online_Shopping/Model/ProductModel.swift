@@ -64,6 +64,8 @@ struct ProductModel: Identifiable, Equatable {
         self.endDate = (dict.value(forKey: "end_date") as? String ?? "").stringDateToDate() ?? Date()
     }
     
+    
+    
     static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
         return lhs.id == rhs.id
     }

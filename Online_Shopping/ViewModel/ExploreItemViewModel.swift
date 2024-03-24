@@ -43,5 +43,12 @@ class ExploreItemViewModel: ObservableObject
             self.showError = true
         }
     }
+    func filterByPrice(ascending: Bool) {
+            if ascending {
+                listArr.sort { $0.price < $1.price }
+            } else {
+                listArr.sort { $0.price > $1.price }
+            }
+        }
     
 }

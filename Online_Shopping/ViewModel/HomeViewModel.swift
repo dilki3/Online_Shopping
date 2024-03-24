@@ -5,7 +5,7 @@
 //  Created by Dila Dinesha on 2024-03-14.
 //
 
-import SwiftUI
+
 
 import SwiftUI
 
@@ -73,7 +73,6 @@ class HomeViewModel: ObservableObject
         }
         
     }
-
     
 }
 
