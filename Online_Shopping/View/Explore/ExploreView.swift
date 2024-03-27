@@ -37,7 +37,7 @@ struct ExploreView: View {
                         ForEach(explorVM.filteredListArr, id: \.id) { cObj in
                             NavigationLink(destination: ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: cObj))) {
                                 ExploreCategoryCell(cObj: cObj)
-                                    .aspectRatio(2, contentMode: .fill)
+                                    .aspectRatio(2.5, contentMode: .fill)
                             }
                         }
                     }

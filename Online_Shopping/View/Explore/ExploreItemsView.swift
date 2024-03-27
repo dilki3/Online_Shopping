@@ -61,7 +61,7 @@ struct ExploreItemsView: View {
                             }
                         }
                     }
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
                     .padding(.bottom, .bottomInsets + 60)
                 }
             }

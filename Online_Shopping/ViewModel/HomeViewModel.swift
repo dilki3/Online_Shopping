@@ -73,6 +73,23 @@ class HomeViewModel: ObservableObject
         }
         
     }
+    func filterByPrice(ascending: Bool) {
+             if ascending {
+                 offerArr.sort { $0.offerPrice ?? $0.price < $1.offerPrice ?? $0.price }
+                 
+             } else {
+                 offerArr.sort { $0.offerPrice ?? $0.price > $1.offerPrice ?? $0.price}
+                
+             }
+         }
+        
+    func filterByPriceNew(ascending: Bool) {
+            if ascending {
+                bestArr.sort { $0.price < $1.price }
+            } else {
+                bestArr.sort { $0.price > $1.price }
+            }
+        }
     
 }
 

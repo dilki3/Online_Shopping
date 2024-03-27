@@ -1,5 +1,5 @@
 //
-//  OfferView.swift
+//  NewArrivalView.swift
 //  Online_Shopping
 //
 //  Created by Dila Dinesha on 2024-03-25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OfferView: View {
+struct NewArrivalView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var homeVM = HomeViewModel.shared
     @State private var isFilterMenuVisible = false
@@ -33,7 +33,7 @@ struct OfferView: View {
                     }
                     
                     
-                    Text( " Offers" )
+                    Text( "New Arrivals" )
                         .font(.customfont(.bold, fontSize: 19))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -47,8 +47,8 @@ struct OfferView: View {
                     .foregroundColor(.black)
                     .accentColor(.black)
                     .onChange(of: selectedSortOption) { newValue in
-                       
-                        homeVM.filterByPrice(ascending: newValue == .priceAscending)
+  
+                        homeVM.filterByPriceNew(ascending: newValue == .priceAscending)
                     }
                     
                 }
@@ -56,7 +56,7 @@ struct OfferView: View {
                 ScrollView {
                     LazyVGrid(columns: columns,spacing: 15) {
                         
-                        ForEach(homeVM.offerArr, id: \.id){
+                        ForEach(homeVM.bestArr, id: \.id){
                             pObj in
                             
                             ProductCell(pObj:pObj, didAddCart: {
@@ -67,6 +67,7 @@ struct OfferView: View {
                                 }
                             })
                         }
+
                     }
                     .padding(.vertical, 15)
                     .padding(.bottom, .bottomInsets + 60)
@@ -87,8 +88,6 @@ struct OfferView: View {
 
 #Preview {
     NavigationView{
-        OfferView()
-        
+        NewArrivalView()
     }
 }
-

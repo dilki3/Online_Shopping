@@ -42,14 +42,14 @@ struct HomeView: View {
                         .scaledToFit()
                         .frame(height: 115)             
                         .padding(.horizontal, 10)
-                
-
-    
-                SectionTitleAll(title: "Exclusive Offer", titleAll: "See All") {
-                    
+            
+                NavigationLink(destination: OfferView()) {
+                    SectionTitleAll(title: "Exclusive Offer", titleAll: "See All") {
+                        
+                    }
+                    .padding(.horizontal, 15)
                 }
-                .padding(.horizontal, 15)
-                
+               // .padding(.horizontal, 15)
                 ScrollView(.horizontal,showsIndicators: false){
                     LazyHStack(spacing:15){
                         ForEach(homeVM.offerArr, id: \.id){
@@ -66,10 +66,12 @@ struct HomeView: View {
                     }
                     .padding(.horizontal,15)
                 }
-                SectionTitleAll(title: "New Arrivals", titleAll: "See All") {
-                    
+                NavigationLink(destination: NewArrivalView()){
+                    SectionTitleAll(title: "New Arrivals", titleAll: "See All") {
+                        
+                    }
+                    .padding(.horizontal, 15)
                 }
-                .padding(.horizontal, 15)
                 
                 ScrollView(.horizontal,showsIndicators: false){
                     LazyHStack(spacing:15){
@@ -87,11 +89,13 @@ struct HomeView: View {
                     }
                     .padding(.horizontal,15)
                 }
-                .padding(.bottom,15)
-                SectionTitleAll(title: "Featured", titleAll: "See All") {
-                    
+                //.padding(.bottom,5)
+                NavigationLink(destination: FeaturedView()){
+                    SectionTitleAll(title: "Featured", titleAll: "See All") {
+                        
+                    }
+                    .padding(.horizontal, 15)
                 }
-                .padding(.horizontal, 15)
                 
                 ScrollView(.horizontal,showsIndicators: false){
                     LazyHStack(spacing:15){
@@ -107,10 +111,10 @@ struct HomeView: View {
                     }
                     .padding(.horizontal,15)
                 }
-                .padding(.bottom,8)
+                .padding(.bottom,15)
                 
                 ScrollView(.horizontal,showsIndicators: false){
-                    LazyHStack(spacing:10){
+                    LazyHStack(spacing:15){
                         ForEach(homeVM.listArr, id: \.id){
                             pObj in
                             

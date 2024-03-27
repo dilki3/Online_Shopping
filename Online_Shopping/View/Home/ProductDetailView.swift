@@ -30,11 +30,11 @@ struct ProductDetailView: View {
                         .indicator(.activity)
                         .transition(.fade(duration: 0.5))
                         .scaledToFit()
-                        .frame(width: .screenWidth * 0.8 , height: .screenWidth * 0.8)
+                        .frame(width: .screenWidth * 0.8 , height: .screenWidth * 0.75)
                         //.padding(.top,8)
                 }
-                .frame(width: .screenWidth, height: .screenWidth * 0.9)
-                .padding(.top,25)
+                .frame(width: .screenWidth, height: .screenWidth * 0.8)
+                .padding(.top,38)
                 
                 VStack{
                     HStack{

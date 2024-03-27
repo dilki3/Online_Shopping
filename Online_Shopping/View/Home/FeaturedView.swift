@@ -1,5 +1,5 @@
 //
-//  OfferView.swift
+//  FeaturedView.swift
 //  Online_Shopping
 //
 //  Created by Dila Dinesha on 2024-03-25.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct OfferView: View {
+struct FeaturedView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var homeVM = HomeViewModel.shared
+    @StateObject var homeVM = FeaturedViewModel.shared
     @State private var isFilterMenuVisible = false
     @State private var selectedSortOption = SortOption.priceAscending
     var columns = [
@@ -33,7 +33,7 @@ struct OfferView: View {
                     }
                     
                     
-                    Text( " Offers" )
+                    Text( " Featured" )
                         .font(.customfont(.bold, fontSize: 19))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -48,7 +48,7 @@ struct OfferView: View {
                     .accentColor(.black)
                     .onChange(of: selectedSortOption) { newValue in
                        
-                        homeVM.filterByPrice(ascending: newValue == .priceAscending)
+                        homeVM.filterByPriceNew(ascending: newValue == .priceAscending)
                     }
                     
                 }
@@ -56,7 +56,7 @@ struct OfferView: View {
                 ScrollView {
                     LazyVGrid(columns: columns,spacing: 15) {
                         
-                        ForEach(homeVM.offerArr, id: \.id){
+                        ForEach(homeVM.listArr, id: \.id){
                             pObj in
                             
                             ProductCell(pObj:pObj, didAddCart: {
@@ -87,8 +87,6 @@ struct OfferView: View {
 
 #Preview {
     NavigationView{
-        OfferView()
-        
+        FeaturedView()
     }
 }
-

@@ -10,7 +10,7 @@ import  SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width:Double = 180.0
+    @State var width:Double = 175.0
     var didAddCart: ( ()->() )?
     var body: some View {
         NavigationLink {
@@ -22,7 +22,7 @@ struct ProductCell: View {
                 .indicator(.activity)
                 .transition(.fade(duration: 0.5))
                 .scaledToFit()
-                .frame(width: 140, height: 150)
+                .frame(width: 130, height: 140)
             
             /*mage("pink")
                 .resizable()
@@ -65,7 +65,7 @@ struct ProductCell: View {
             
         }
         .padding(12)
-        .frame(width: width, height: 260)
+        .frame(width: width, height: 250)
         .overlay{
             RoundedRectangle(cornerRadius: 16)
                 .stroke( Color.placeholder.opacity(0.5), lineWidth:1)

@@ -29,11 +29,11 @@ class MainViewModel: ObservableObject {
             // User Not Login
         }
         
-        #if DEBUG
+        /*#if DEBUG
         txtUsername = "Mike"
         txtEmail = "mike22@gmail.com"
         txtPassword = "123456"
-        #endif
+        #endif*/
         
     }
     

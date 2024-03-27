@@ -24,7 +24,7 @@ struct ExploreCategoryCell: View {
         
             Spacer()
             Text(cObj.name)
-                .font(.customfont(.bold, fontSize: 20))
+                .font(.customfont(.bold, fontSize: 18))
                 .foregroundColor(.primaryText)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             
@@ -36,7 +36,7 @@ struct ExploreCategoryCell: View {
         .cornerRadius(16)
         .overlay (
             RoundedRectangle(cornerRadius: 16)
-                .stroke(cObj.color, lineWidth: 2)
+                .stroke(cObj.color, lineWidth: 1)
         )
     }}
 
