@@ -9,7 +9,10 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct FavouriteView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+   // @StateObject var itemsVM = CartViewModel.shared
     @StateObject var favVM = FavouriteViewModel.shared
+    var didAddCart: ( ()->() )?
     var body: some View {
         ZStack{
             
@@ -18,7 +21,13 @@ struct FavouriteView: View {
                     ForEach( favVM.listArr , id: \.id, content: {
                         fObj in
                         
-                        FavouriteRow(fObj: fObj)
+                        FavouriteRow(fObj: fObj,didAddCart: {
+                            CartViewModel.serviceCallAddToCart(prodId: fObj.prodId, qty: 1) { isDone, msg in
+                                
+                                self.favVM.errorMessage = msg
+                                self.favVM.showError = true
+                            }
+                        })
                         
                     })
                 }
@@ -27,8 +36,6 @@ struct FavouriteView: View {
                 .padding(.bottom, .bottomInsets + 60)
             
             }
-            
-            
             VStack {
                     
                 HStack{
@@ -54,6 +61,10 @@ struct FavouriteView: View {
                 RoundButton(title: "Add All To Cart")
                     .padding(.horizontal, 20)
                     .padding(.bottom, .bottomInsets + 80)
+                    .onTapGesture {
+                                      
+                      // itemsVM.serviceCallUpdateQty(cObj: CartItemModel, newQty: <#T##Int#>)
+                    }
                 
             }
             
@@ -62,6 +73,7 @@ struct FavouriteView: View {
         }
         .onAppear{
             favVM.serviceCallList()
+            
            
         }
         .ignoresSafeArea()
@@ -69,5 +81,7 @@ struct FavouriteView: View {
 }
 
 #Preview {
-    FavouriteView()
+    NavigationView{
+        FavouriteView()
+    }
 }

@@ -47,9 +47,6 @@ struct ProductModel: Identifiable, Equatable {
         
         self.detail = dict.value(forKey: "detail") as? String ?? ""
         self.name = dict.value(forKey: "name") as? String ?? ""
-        //self.unitName = dict.value(forKey: "unit_name") as? String ?? ""
-       // self.unitValue = dict.value(forKey: "unit_value") as? String ?? ""
-       // self.nutritionWeight = dict.value(forKey: "nutrition_weight") as? String ?? ""
         self.size = dict.value(forKey: "size") as? String ?? ""
         self.color = dict.value(forKey: "color") as? String ?? ""
         self.image = dict.value(forKey: "image") as? String ?? ""

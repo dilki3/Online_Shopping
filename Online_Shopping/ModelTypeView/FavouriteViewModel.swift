@@ -16,7 +16,6 @@ class FavouriteViewModel: ObservableObject
     
     @Published var listArr: [ProductModel] = []
     
-    
     init() {
         serviceCallList()
     }

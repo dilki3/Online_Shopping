@@ -43,16 +43,17 @@ struct HomeView: View {
                         .frame(height: 115)             
                         .padding(.horizontal, 10)
             
-                NavigationLink(destination: OfferView()) {
-                    SectionTitleAll(title: "Exclusive Offer", titleAll: "See All") {
+           
+                NavigationLink(destination: NewArrivalView()){
+                    SectionTitleAll(title: "New Arrivals", titleAll: "See All") {
                         
                     }
                     .padding(.horizontal, 15)
                 }
-               // .padding(.horizontal, 15)
+                
                 ScrollView(.horizontal,showsIndicators: false){
                     LazyHStack(spacing:15){
-                        ForEach(homeVM.offerArr, id: \.id){
+                        ForEach(homeVM.bestArr, id: \.id){
                             pObj in
                             
                             ProductCell(pObj:pObj, didAddCart: {
@@ -66,16 +67,17 @@ struct HomeView: View {
                     }
                     .padding(.horizontal,15)
                 }
-                NavigationLink(destination: NewArrivalView()){
-                    SectionTitleAll(title: "New Arrivals", titleAll: "See All") {
+                
+                NavigationLink(destination: OfferView()) {
+                    SectionTitleAll(title: "Special Offers", titleAll: "See All") {
                         
                     }
                     .padding(.horizontal, 15)
                 }
-                
+               // .padding(.horizontal, 15)
                 ScrollView(.horizontal,showsIndicators: false){
                     LazyHStack(spacing:15){
-                        ForEach(homeVM.bestArr, id: \.id){
+                        ForEach(homeVM.offerArr, id: \.id){
                             pObj in
                             
                             ProductCell(pObj:pObj, didAddCart: {

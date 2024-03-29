@@ -96,7 +96,7 @@ struct PromoCodeView: View {
                    
                     Spacer()
                     
-                    Text("Promo Code")
+                    Text("Coupon")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()

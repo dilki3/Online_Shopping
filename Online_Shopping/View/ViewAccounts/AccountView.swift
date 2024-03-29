@@ -94,9 +94,16 @@ struct AccountView: View {
                             } label: {
                                 AccountRow(title: "Notifications", icon: "a_noitification")
                             }
-                           
-                            AccountRow(title: "Help", icon: "a_help")
-                            AccountRow(title: "About", icon: "a_about")
+                            NavigationLink {
+                                //NotificationView()
+                            } label: {
+                                AccountRow(title: "Help", icon: "a_help")
+                            }
+                            NavigationLink {
+                                //NotificationView()
+                            } label: {
+                                AccountRow(title: "About", icon: "a_about")
+                            }
                         }
                         Button {
                             MainViewModel.shared.logout()
@@ -113,14 +120,7 @@ struct AccountView: View {
                                                 .stroke(Color.primaryApp, lineWidth: 1) // Adjust the line width as needed
                                         )
                                 
-                                HStack{
-                                    Spacer()
-                                    Image("logout")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 20, height: 20)
-                                        .padding(.trailing, 20)
-                                }
+                            
                             }
                            
                         }
