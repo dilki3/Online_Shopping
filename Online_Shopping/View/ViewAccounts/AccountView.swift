@@ -50,20 +50,19 @@ struct AccountView: View {
                 ScrollView {
                     LazyVStack {
                         VStack{
-                            
-                            NavigationLink {
-                                MyOrdersView()
-                            } label: {
-                                AccountRow(title: "My Orders", icon: "a_order")
-                            }
-                            
-                            
+                           
                             NavigationLink {
                                 MyDetailsView()
                             } label: {
                                 AccountRow(title: "My Details", icon: "a_my_detail")
                             }
                             
+                            
+                            NavigationLink {
+                                MyOrdersView()
+                            } label: {
+                                AccountRow(title: "My Orders", icon: "a_order")
+                            }
                             
                             
                             NavigationLink {
@@ -82,27 +81,23 @@ struct AccountView: View {
                             NavigationLink {
                                 PromoCodeView()
                             } label: {
-                                AccountRow(title: "Promo Code", icon: "a_promocode")
+                                AccountRow(title: "Coupon", icon: "a_promocode")
                             }
                             
                             
                         }
                         
                         VStack{
+                         
                             NavigationLink {
-                                NotificationView()
-                            } label: {
-                                AccountRow(title: "Notifications", icon: "a_noitification")
-                            }
-                            NavigationLink {
-                                //NotificationView()
-                            } label: {
-                                AccountRow(title: "Help", icon: "a_help")
-                            }
-                            NavigationLink {
-                                //NotificationView()
+                                AboutView()
                             } label: {
                                 AccountRow(title: "About", icon: "a_about")
+                            }
+                            NavigationLink {
+                                HelpView()
+                            } label: {
+                                AccountRow(title: "Help", icon: "a_help")
                             }
                         }
                         Button {

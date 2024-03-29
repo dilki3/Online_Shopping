@@ -52,7 +52,7 @@ struct OrderAccpetView: View {
                             .foregroundColor(.primaryApp)
                             .padding(.vertical, 15)
                 }
-                .padding(.bottom , .bottomInsets + 15)
+                .padding(.bottom , .bottomInsets + 80)
                 
                 
                 /*NavigationLink(destination: HomeView(), isActive: $navigateToHome) {

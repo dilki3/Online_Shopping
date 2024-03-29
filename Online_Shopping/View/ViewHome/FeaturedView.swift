@@ -76,7 +76,7 @@ struct FeaturedView: View {
             .padding(.horizontal,10)
         }
         .alert(isPresented: $homeVM.showError, content: {
-            Alert(title: Text(Globs.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
+            Alert(title: Text(Links.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
         })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

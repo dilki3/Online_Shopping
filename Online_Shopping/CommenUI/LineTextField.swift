@@ -17,7 +17,7 @@ struct LineTextField: View {
         VStack {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 16))
-                .foregroundColor(.textTitle)
+                .foregroundColor(.black)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
            
@@ -44,7 +44,7 @@ struct LineSecureField: View {
         VStack {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 16))
-                .foregroundColor(.textTitle)
+                .foregroundColor(.black)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
             if (isShowPassword) {

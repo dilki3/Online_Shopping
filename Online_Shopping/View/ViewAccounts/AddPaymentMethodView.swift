@@ -84,7 +84,7 @@ struct AddPaymentMethodView: View {
         }
         
         .alert(isPresented: $payVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text(payVM.errorMessage), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(Links.AppName), message: Text(payVM.errorMessage), dismissButton: .default(Text("Ok")))
         }
         .navigationTitle("")
         .navigationBarHidden(true)

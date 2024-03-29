@@ -22,9 +22,9 @@ class MainViewModel: ObservableObject {
     init() {
         
         
-        if( Utils.UDValueBool(key: Globs.userLogin) ) {
+        if( Utils.UDValueBool(key: Links.userLogin) ) {
             // User Login
-            self.setUserData(uDict: Utils.UDValue(key: Globs.userPayload) as? NSDictionary ?? [:] )
+            self.setUserData(uDict: Utils.UDValue(key: Links.userPayload) as? NSDictionary ?? [:] )
         }else{
             // User Not Login
         }
@@ -38,7 +38,7 @@ class MainViewModel: ObservableObject {
     }
     
     func logout(){
-        Utils.UDSET(data: false, key: Globs.userLogin)
+        Utils.UDSET(data: false, key: Links.userLogin)
         isUserLogin = false
     }
     
@@ -58,7 +58,7 @@ class MainViewModel: ObservableObject {
             return
         }
         
-        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Globs.SV_LOGIN) { responseObj in
+        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Links.OS_LOGIN) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -100,7 +100,7 @@ class MainViewModel: ObservableObject {
             return
         }
         
-        ServiceCall.post(parameter: [ "username": txtUsername , "email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Globs.SV_SIGN_UP) { responseObj in
+        ServiceCall.post(parameter: [ "username": txtUsername , "email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Links.OS_SIGN_UP) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])
@@ -119,8 +119,8 @@ class MainViewModel: ObservableObject {
     func setUserData(uDict: NSDictionary) {
         
         
-        Utils.UDSET(data: uDict, key: Globs.userPayload)
-        Utils.UDSET(data: true, key: Globs.userLogin)
+        Utils.UDSET(data: uDict, key: Links.userPayload)
+        Utils.UDSET(data: true, key: Links.userLogin)
         self.userObj = UserModel(dict: uDict)
         self.isUserLogin = true
         

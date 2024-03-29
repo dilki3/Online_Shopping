@@ -56,7 +56,7 @@ class DeliveryAddressViewModel: ObservableObject
     //MARK: ServiceCall
     
     func serviceCallList(){
-        ServiceCall.post(parameter: [:], path: Globs.SV_ADDRESS_LIST, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: [:], path: Links.OS_ADDRESS_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -77,7 +77,7 @@ class DeliveryAddressViewModel: ObservableObject
     }
     
     func serviceCallRemove(cObj: AddressModel){
-        ServiceCall.post(parameter: ["address_id": cObj.id ], path: Globs.SV_REMOVE_ADDRESS, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["address_id": cObj.id ], path: Links.OS_REMOVE_ADDRESS, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -95,7 +95,7 @@ class DeliveryAddressViewModel: ObservableObject
     }
     
     func serviceCallUpdateAddress( aObj: AddressModel?, didDone: (( )->())? ) {
-        ServiceCall.post(parameter: ["address_id":  aObj?.id ?? "", "name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode ], path: Globs.SV_UPDATE_ADDRESS, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["address_id":  aObj?.id ?? "", "name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode ], path: Links.OS_UPDATE_ADDRESS, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.clearAll()
@@ -114,7 +114,7 @@ class DeliveryAddressViewModel: ObservableObject
     }
     
     func serviceCallAddAddress(didDone: ((  )->())? ) {
-        ServiceCall.post(parameter: ["name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode  ], path: Globs.SV_ADD_ADDRESS, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode  ], path: Links.OS_ADD_ADDRESS, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.clearAll()

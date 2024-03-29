@@ -319,7 +319,7 @@ struct FavouriteProductDetailView: View {
         }
         .alert(isPresented: $detailVM.showError, content: {
             
-            Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
+            Alert(title: Text(Links.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
         })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

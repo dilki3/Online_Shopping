@@ -16,7 +16,7 @@ struct HomeView: View {
                     Image("color_logo")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50,height: 50)
+                        .frame(width: 30,height: 30)
                                             HStack{
                         Image("location")
                             .resizable()
@@ -135,7 +135,7 @@ struct HomeView: View {
             }
         }
         .alert(isPresented: $homeVM.showError, content: {
-            Alert(title: Text(Globs.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
+            Alert(title: Text(Links.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
         })
         .ignoresSafeArea()
     }

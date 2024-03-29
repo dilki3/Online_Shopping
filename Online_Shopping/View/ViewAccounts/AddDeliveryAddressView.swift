@@ -124,7 +124,7 @@ struct AddDeliveryAddressView: View {
             }
         }
         .alert(isPresented: $addressVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text(addressVM.errorMessage), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(Links.AppName), message: Text(addressVM.errorMessage), dismissButton: .default(Text("Ok")))
         }
         .navigationTitle("")
         .navigationBarHidden(true)

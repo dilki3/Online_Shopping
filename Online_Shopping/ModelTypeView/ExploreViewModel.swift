@@ -23,7 +23,7 @@ class ExploreViewModel: ObservableObject {
     
     //MARK: ServiceCall
     func serviceCallList(){
-        ServiceCall.post(parameter: [:], path: Globs.SV_EXPLORE_LIST, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: [:], path: Links.OS_EXPLORE_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map({ obj in
@@ -42,7 +42,6 @@ class ExploreViewModel: ObservableObject {
         }
     }
     
-    // Function to filter the list based on search text
     func filterList() {
         if !txtSearch.isEmpty {
             filteredListArr = listArr.filter { $0.name.localizedCaseInsensitiveContains(txtSearch) }

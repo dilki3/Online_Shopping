@@ -157,7 +157,7 @@ struct CheckoutView: View {
                         })
                     } label: {
                         HStack {
-                            Text("Promo Code")
+                            Text("Coupon")
                                 .font(.customfont(.semibold, fontSize: 18))
                                 .foregroundColor(.secondaryText)
                                 .frame(height: 46)

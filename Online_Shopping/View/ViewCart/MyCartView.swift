@@ -122,7 +122,7 @@ struct MyCartView: View {
             EmptyView()
         }) )
         .alert(isPresented: $cartVM.showError, content: {
-            Alert(title: Text(Globs.AppName), message: Text(cartVM.errorMessage), dismissButton: .default(Text("OK")) )
+            Alert(title: Text(Links.AppName), message: Text(cartVM.errorMessage), dismissButton: .default(Text("OK")) )
         })
       
         .animation(.easeInOut, value: cartVM.showCheckout)

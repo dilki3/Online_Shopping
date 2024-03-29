@@ -15,14 +15,15 @@ struct MyOrdersDetailView: View {
     
     var body: some View {
         ZStack{
-            
+         
             ScrollView {
-                
+              
                 VStack{
+                 
                     HStack{
-                        Text("Order ID: # \( detailVM.pObj.id )")
+                        Text("Order ID: \( detailVM.pObj.id )")
                             .font(.customfont(.bold, fontSize: 20))
-                            .foregroundColor(.primaryText)
+                            .foregroundColor(Color(hex: "#8349D0"))
                         
                         Spacer()
                         
@@ -44,38 +45,14 @@ struct MyOrdersDetailView: View {
                             .foregroundColor( getOrderStatusColor(mObj: detailVM.pObj))
                     }
                     .padding(.bottom, 8)
-                    
+                  
                     Text("\(detailVM.pObj.address),\(detailVM.pObj.city), \(detailVM.pObj.state), \(detailVM.pObj.postalCode) ")
                         .font(.customfont(.regular, fontSize: 16))
-                        .foregroundColor(.secondaryText)
+                        .foregroundColor(.black)
                         .multilineTextAlignment( .leading)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 8)
                     
-                    HStack{
-                        Text("Delivery Type:")
-                            .font(.customfont(.medium, fontSize: 16))
-                            .foregroundColor(.primaryText)
-                        
-                        Spacer()
-                        
-                        Text( getDeliveryType(mObj: detailVM.pObj )  )
-                            .font(.customfont(.regular, fontSize: 16))
-                            .foregroundColor( .primaryText )
-                    }
-                    .padding(.bottom, 4)
-                    
-                    HStack{
-                        Text("Payment Type:")
-                            .font(.customfont(.medium, fontSize: 16))
-                            .foregroundColor(.primaryText)
-                        
-                        Spacer()
-                        
-                        Text( getPaymentType(mObj: detailVM.pObj )  )
-                            .font(.customfont(.regular, fontSize: 16))
-                            .foregroundColor( .primaryText )
-                    }
                     
                     
                 }
@@ -86,14 +63,14 @@ struct MyOrdersDetailView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, .topInsets + 46)
                 
-                LazyVStack {
+                VStack {
                     ForEach(detailVM.listArr, id: \.id) { pObj in
                         OrderItemRow(pObj: pObj)
                     }
                 }
-                
+               
                 VStack{
-                                       
+                
                     HStack{
                         Text("Amount:")
                             .font(.customfont(.bold, fontSize: 18))
@@ -121,7 +98,7 @@ struct MyOrdersDetailView: View {
                     .padding(.bottom, 4)
                     
                     HStack{
-                        Text("Discount Cost:")
+                        Text("Discount:")
                             .font(.customfont(.bold, fontSize: 18))
                             .foregroundColor(.primaryText)
                         
@@ -136,15 +113,15 @@ struct MyOrdersDetailView: View {
                     Divider()
                     
                     HStack{
-                        Text("Total:")
-                            .font(.customfont(.bold, fontSize: 22))
-                            .foregroundColor(.primaryText)
+                        Text("Total Amount:")
+                            .font(.customfont(.bold, fontSize: 21))
+                            .foregroundColor(Color(hex: "#8349D0"))
                         
                         Spacer()
                         
                         Text( "$\( detailVM.pObj.userPayPrice ?? 0.0, specifier: "%.2f" )"  )
-                            .font(.customfont(.bold, fontSize: 22))
-                            .foregroundColor( .primaryText )
+                            .font(.customfont(.bold, fontSize: 21))
+                            .foregroundColor(Color(hex: "#8349D0"))
                     }
                     .padding(.bottom, 4)
                     
@@ -174,7 +151,7 @@ struct MyOrdersDetailView: View {
                     Spacer()
                     
                     Text("My Order Detail")
-                        .font(.customfont(.semibold, fontSize: 16))
+                        .font(.customfont(.semibold, fontSize: 19))
                         .foregroundColor(.primaryText)
                     Spacer()
                     
@@ -186,11 +163,12 @@ struct MyOrdersDetailView: View {
             }
             .padding(.top, .topInsets)
             .padding(.horizontal, 20)
+            .padding(.bottom,20)
             
         }
         .alert(isPresented: $detailVM.showError, content: {
             
-            Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
+            Alert(title: Text(Links.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
         })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

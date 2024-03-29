@@ -46,7 +46,7 @@ class CartViewModel: ObservableObject
     //MARK: ServiceCall
     
     func serviceCallList(){
-        ServiceCall.post(parameter: ["promo_code_id": promoObj?.id ?? "", "delivery_type": deliveryType ], path: Globs.SV_CART_LIST, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["promo_code_id": promoObj?.id ?? "", "delivery_type": deliveryType ], path: Links.OS_CART_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -77,7 +77,7 @@ class CartViewModel: ObservableObject
     }
     
     func serviceCallUpdateQty(cObj: CartItemModel, newQty: Int ){
-        ServiceCall.post(parameter: ["cart_id": cObj.cartId, "prod_id": cObj.prodId, "new_qty": newQty ], path: Globs.SV_UPDATE_CART, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["cart_id": cObj.cartId, "prod_id": cObj.prodId, "new_qty": newQty ], path: Links.OS_UPDATE_CART, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -96,7 +96,7 @@ class CartViewModel: ObservableObject
     }
     
     func serviceCallRemove(cObj: CartItemModel){
-        ServiceCall.post(parameter: ["cart_id": cObj.cartId, "prod_id": cObj.prodId ], path: Globs.SV_REMOVE_CART, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["cart_id": cObj.cartId, "prod_id": cObj.prodId ], path: Links.OS_REMOVE_CART, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -133,7 +133,7 @@ class CartViewModel: ObservableObject
                                      "deliver_type": deliveryType,
                                      "payment_type": paymentType,
                                      "pay_id": paymentType == 1 ? "" : "\( paymentObj?.id ?? 0)",
-                                     "promo_code_id": promoObj?.id ?? ""  ], path: Globs.SV_ORDER_PLACE, isToken: true ) { responseObj in
+                                     "promo_code_id": promoObj?.id ?? ""  ], path: Links.OS_ORDER_PLACE, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -159,7 +159,7 @@ class CartViewModel: ObservableObject
     }
     
     class func serviceCallAddToCart(prodId: Int, qty: Int, didDone: ((_ isDone: Bool,_ message: String  )->())? ) {
-        ServiceCall.post(parameter: ["prod_id":  prodId, "qty": qty], path: Globs.SV_ADD_CART, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["prod_id":  prodId, "qty": qty], path: Links.OS_ADD_CART, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     didDone?(true, response.value(forKey: KKey.message) as? String ?? "Done" )

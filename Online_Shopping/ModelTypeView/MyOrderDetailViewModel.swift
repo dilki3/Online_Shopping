@@ -22,7 +22,7 @@ class MyOrderDetailViewModel: ObservableObject {
     //MARK: ServiceCall
     
     func serviceCallDetail(){
-        ServiceCall.post(parameter: ["order_id": self.pObj.id ], path: Globs.SV_MY_ORDERS_DETAIL, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["order_id": self.pObj.id ], path: Links.OS_MY_ORDERS_DETAIL, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     

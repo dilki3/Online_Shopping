@@ -59,7 +59,7 @@ class FavoriteDetailViewModel: ObservableObject {
     //MARK: ServiceCall
     
     func serviceCallDetail(){
-        ServiceCall.post(parameter: ["prod_id": self.fObj.prodId ], path: Globs.SV_PRODUCT_DETAIL, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["prod_id": self.fObj.prodId ], path: Links.OS_PRODUCT_DETAIL, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -88,7 +88,7 @@ class FavoriteDetailViewModel: ObservableObject {
     }
     
     func serviceCallAddRemoveFav(){
-        ServiceCall.post(parameter: ["prod_id": self.fObj.prodId ], path: Globs.SV_ADD_REMOVE_FAVORITE, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["prod_id": self.fObj.prodId ], path: Links.OS_ADD_REMOVE_FAVORITE, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     

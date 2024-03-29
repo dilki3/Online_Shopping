@@ -37,7 +37,7 @@ struct ChangePasswordView: View {
                     
                     
                 }
-                .padding(20)
+                .padding(25)
                 .padding(.top, .topInsets + 60)
 
             }
@@ -79,7 +79,7 @@ struct ChangePasswordView: View {
             CountryPickerUI(country: $myVM.countryObj)
         })
         .alert(isPresented: $myVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text(myVM.errorMessage), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(Links.AppName), message: Text(myVM.errorMessage), dismissButton: .default(Text("Ok")))
         }
         .navigationTitle("")
         .navigationBarHidden(true)

@@ -35,7 +35,7 @@ class HomeViewModel: ObservableObject
     //MARK: ServiceCall
     
     func serviceCallList(){
-        ServiceCall.post(parameter: [:], path: Globs.SV_HOME, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: [:], path: Links.OS_HOME, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     

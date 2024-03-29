@@ -40,7 +40,7 @@ class PaymentViewModel: ObservableObject
     //MARK: ServiceCall
     
     func serviceCallList(){
-        ServiceCall.post(parameter: [:], path: Globs.SV_PAYMENT_METHOD_LIST, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: [:], path: Links.OS_PAYMENT_METHOD_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -61,7 +61,7 @@ class PaymentViewModel: ObservableObject
     }
     
     func serviceCallRemove(pObj: PaymentModel){
-        ServiceCall.post(parameter: ["pay_id": pObj.id ], path: Globs.SV_REMOVE_PAYMENT_METHOD, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["pay_id": pObj.id ], path: Links.OS_REMOVE_PAYMENT_METHOD, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -105,7 +105,7 @@ class PaymentViewModel: ObservableObject
             return
         }
         
-        ServiceCall.post(parameter: ["name":  txtName, "card_number": txtCardNumber, "card_month": txtCardMonth, "card_year": txtCardYear  ], path: Globs.SV_ADD_PAYMENT_METHOD, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["name":  txtName, "card_number": txtCardNumber, "card_month": txtCardMonth, "card_year": txtCardYear  ], path: Links.OS_ADD_PAYMENT_METHOD, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.clearAll()

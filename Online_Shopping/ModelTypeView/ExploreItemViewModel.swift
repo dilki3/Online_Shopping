@@ -22,10 +22,8 @@ class ExploreItemViewModel: ObservableObject
         serviceCallList()
     }
     
-    //MARK: ServiceCall
-    
     func serviceCallList(){
-        ServiceCall.post(parameter: ["type_id": self.cObj.id ], path: Globs.SV_EXPLORE_ITEMS_LIST, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["type_id": self.cObj.id ], path: Links.OS_EXPLORE_ITEMS_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     

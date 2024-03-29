@@ -15,7 +15,7 @@ struct SignUpView: View {
     var body: some View {
         ZStack{
             
-            Image("bottom_bg")
+            Image("")
                 .resizable()
                 .scaledToFill()
                 .frame(width: .screenWidth, height: .screenHeight)
@@ -136,7 +136,7 @@ struct SignUpView: View {
             
         }
         .alert(isPresented: $mainVM.showError, content: {
-            Alert(title: Text(Globs.AppName), message: Text(mainVM.errorMessage) , dismissButton: .default(Text("Ok")))
+            Alert(title: Text(Links.AppName), message: Text(mainVM.errorMessage) , dismissButton: .default(Text("Ok")))
         })
         .navigationTitle("")
         .navigationBarHidden(true)

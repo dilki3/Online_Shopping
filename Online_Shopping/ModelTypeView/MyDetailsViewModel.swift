@@ -90,7 +90,7 @@ class MyDetailsViewModel: ObservableObject
         
         
         
-        ServiceCall.post(parameter: ["name": txtName, "mobile": txtMobile, "mobile_code": txtMobileCode, "username": txtUsername ], path: Globs.SV_UPDATE_PROFILE, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["name": txtName, "mobile": txtMobile, "mobile_code": txtMobileCode, "username": txtUsername ], path: Links.OS_UPDATE_PROFILE, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     
@@ -132,7 +132,7 @@ class MyDetailsViewModel: ObservableObject
         }
         
         
-        ServiceCall.post(parameter: ["current_password": txtCurrentPassword, "new_password": txtNewPassword], path: Globs.SV_CHANGE_PASSWORD, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["current_password": txtCurrentPassword, "new_password": txtNewPassword], path: Links.OS_CHANGE_PASSWORD, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     

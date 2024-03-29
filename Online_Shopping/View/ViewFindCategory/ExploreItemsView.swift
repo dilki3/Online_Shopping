@@ -69,7 +69,7 @@ struct ExploreItemsView: View {
             .padding(.horizontal, 15)
         }
         .alert(isPresented: $itemsVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text(itemsVM.errorMessage), dismissButton: .default(Text("OK")))
+            Alert(title: Text(Links.AppName), message: Text(itemsVM.errorMessage), dismissButton: .default(Text("OK")))
         }
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

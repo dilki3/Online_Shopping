@@ -27,9 +27,9 @@ struct MyOrdersView: View {
                             VStack{
                                 HStack {
                                     
-                                    Text("Order No: #")
+                                    Text("Order No:")
                                         .font(.customfont(.bold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
+                                        .foregroundColor(Color(hex: "#8349D0"))
                                     
                                     
                                     Text("\( myObj.id  )")
@@ -53,14 +53,6 @@ struct MyOrdersView: View {
                                 
                                 HStack {
                                     
-                                    if let imgageUrl = myObj.images.first {
-                                        WebImage(url: URL(string: imgageUrl ))
-                                            .resizable()
-                                            .indicator(.activity) // Activity Indicator
-                                            .transition(.fade(duration: 0.5))
-                                            .scaledToFit()
-                                            .frame(width: 60, height: 60)
-                                    }
                                     
                                     VStack{
                                         HStack {

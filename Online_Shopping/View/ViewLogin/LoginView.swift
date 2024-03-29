@@ -16,7 +16,7 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            Image("bottom_bg")
+            Image("")
             .resizable()
             .scaledToFill()
             .frame(width: .screenWidth, height: .screenHeight)
@@ -31,13 +31,13 @@ struct LoginView: View {
                     .padding(.bottom, 40)
                 
                 
-                Text("Loging")
+                Text("Sign In")
                     .font(.customfont(.semibold, fontSize: 26))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 4)
                 
-                Text("Enter your emails and password")
+                Text("Please Enter your email and password")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -50,13 +50,10 @@ struct LoginView: View {
                     .padding(.bottom, .screenWidth * 0.02)
                 
                 
-                NavigationLink {
-                    ForgotPasswordView()
-                } label: {
                     Text("Forgot Password?")
                         .font(.customfont(.medium, fontSize: 14))
-                        .foregroundColor(.primaryText)
-                }
+                        .foregroundColor(.red)
+                
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(.bottom, .screenWidth * 0.03)
                 
@@ -116,7 +113,7 @@ struct LoginView: View {
         }
        .alert(isPresented: $loginVM.showError) {
         
-           Alert(title: Text(Globs.AppName), message: Text( loginVM.errorMessage ), dismissButton: .default(Text("Ok")))
+           Alert(title: Text(Links.AppName), message: Text( loginVM.errorMessage ), dismissButton: .default(Text("Ok")))
         }
         .background(Color.white)
         .navigationTitle("")
