@@ -13,39 +13,43 @@ struct AccountView: View {
     var body: some View {
         ZStack{
             VStack{
-                
+               Divider()
+                Divider()
                 HStack(spacing: 15) {
-                    Image("profile")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .cornerRadius(30)
-                    
-                    VStack{
-                        
-                        HStack{
-                            Text(myVM1.userObj.username)
-                                .font(.customfont(.bold, fontSize: 20))
-                                .foregroundColor(.primaryText)
-                            
-                            Image(systemName: "pencil")
-                                .foregroundColor(.primaryApp)
-                            
-                            Spacer()
-                        }
-                        
-                        Text(myVM1.userObj.email)
-                            .font(.customfont(.regular, fontSize: 16))
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading )
-                            .accentColor(.secondaryText)
-                        
-                        
-                            
-                    }
-                }
-                .padding(.horizontal, 20)
+                               Image("profile")
+                                   .resizable()
+                                   .frame(width: 60, height: 60)
+                                   .cornerRadius(30)
+                               
+                    VStack(spacing:3){
+                                   HStack{
+                                       Text(myVM1.userObj.username)
+                                           .font(.customfont(.bold, fontSize: 20))
+                                           .foregroundColor(.primaryText)
+                                       
+                                       Image(systemName: "edit")
+                                           .foregroundColor(.primaryApp)
+                                       
+                                       Spacer()
+                                   }
+                                   
+                                   Text(myVM1.userObj.email)
+                                       .font(.customfont(.regular, fontSize: 16))
+                                       .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                       .accentColor(.secondaryText)
+                               }
+                           }
+                        .padding()
+                           .background(Color.white)
+                           .overlay(
+                               RoundedRectangle(cornerRadius: 1)
+                                .stroke(Color(hex: "#8349D0"), lineWidth: 0.5)
+                           )
+                
+                //.padding(.horizontal, 20)
                 .padding(.top, .topInsets)
                 
-                Divider()
+              
                 
                 ScrollView {
                     LazyVStack {

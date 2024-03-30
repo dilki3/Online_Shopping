@@ -19,47 +19,19 @@ struct AddDeliveryAddressView: View {
             ScrollView{
                 VStack(spacing: 15){
                     
-                    HStack{
-                        
-                        Button {
-                            addressVM.txtTypeName = "Home"
-                        } label: {
-                            Image(systemName: addressVM.txtTypeName == "Home" ? "record.circle" : "circle"  )
-                                
-                            Text("Home")
-                                .font(.customfont(.medium, fontSize: 16))
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        }
-                        .foregroundColor(.primaryText)
-                        
-                        Button {
-                            addressVM.txtTypeName = "Office"
-                        } label: {
-                            Image(systemName: addressVM.txtTypeName == "Office" ? "record.circle" : "circle"  )
-                                
-                            Text("Office")
-                                .font(.customfont(.medium, fontSize: 16))
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading )
-                        }
-                        .foregroundColor(.primaryText)
-                        
-                        
-                    }
+                    LineTextField(title: "Name", placholder: "Enter your name" , txt: $addressVM.txtName)
                     
+                    LineTextField(title: "Mobile", placholder: "Enter your mobile number", txt: $addressVM.txtMobile, keyboardType: .numberPad)
                     
-                    LineTextField(title: "Name", placholder: "Enter you name" , txt: $addressVM.txtName)
-                    
-                    LineTextField(title: "Mobile", placholder: "Enter you mobile number", txt: $addressVM.txtMobile, keyboardType: .numberPad)
-                    
-                    LineTextField(title: "Address Line", placholder: "Enter you address" , txt: $addressVM.txtAddress)
+                    LineTextField(title: "Address Line", placholder: "Enter your address" , txt: $addressVM.txtAddress)
                     
                     HStack{
-                        LineTextField(title: "City", placholder: "Enter you city" , txt: $addressVM.txtCity)
-                        LineTextField(title: "State", placholder: "Enter you state" , txt: $addressVM.txtState)
+                        LineTextField(title: "City", placholder: "Enter your city" , txt: $addressVM.txtCity)
+                        LineTextField(title: "State", placholder: "Enter your state" , txt: $addressVM.txtState)
                     }
                    
                     
-                    LineTextField(title: "Postal Code", placholder: "Enter you postal code" , txt: $addressVM.txtPostalCode)
+                    LineTextField(title: "Postal Code", placholder: "Enter your postal code" , txt: $addressVM.txtPostalCode)
                     
                     RoundButton(title: isEdit ? "Update Address" : "Add Address") {
                         if(isEdit) {

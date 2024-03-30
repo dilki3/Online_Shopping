@@ -28,7 +28,7 @@ struct HelpView: View {
                     Spacer()
                     
                     Text("Help ?")
-                        .font(.customfont(.bold, fontSize: 20))
+                        .font(.title2)
                         .frame(height: 46)
                     
                     Spacer()
@@ -70,7 +70,7 @@ struct HelpItem: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text(question).font(.title2).bold()
+            Text(question).font(.title2).fontWeight(.medium)
             Text(answer).font(.body).foregroundColor(.secondary)
         }
     }

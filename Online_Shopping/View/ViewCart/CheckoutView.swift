@@ -22,6 +22,7 @@ struct CheckoutView: View {
                     Text("Checkout")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
+                        .foregroundColor(Color(hex: "#8349D0"))
                     Spacer()
                     
                     Button {
@@ -30,7 +31,7 @@ struct CheckoutView: View {
                         Image("close")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 17, height: 17)
                     }
                     
                     
@@ -42,9 +43,9 @@ struct CheckoutView: View {
                 
                 VStack{
                     HStack {
-                        Text("Delivery Type")
+                        Text("Type")
                             .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                             .frame(height: 46)
                         
                         Spacer()
@@ -68,9 +69,9 @@ struct CheckoutView: View {
                             } )
                         } label: {
                             HStack {
-                                Text("Delivery")
+                                Text("Delivery Address")
                                     .font(.customfont(.semibold, fontSize: 18))
-                                    .foregroundColor(.secondaryText)
+                                    .foregroundColor(.black)
                                     .frame(height: 46)
                                 
                                 Spacer()
@@ -83,7 +84,7 @@ struct CheckoutView: View {
                                 Image("next")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 17, height: 17)
                                     .foregroundColor(.primaryText)
                                 
                             }
@@ -98,7 +99,7 @@ struct CheckoutView: View {
                     HStack {
                         Text("Payment Type")
                             .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                             .frame(height: 46)
                         
                         Spacer()
@@ -141,7 +142,7 @@ struct CheckoutView: View {
                                 Image("next")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 17, height: 17)
                                     .foregroundColor(.primaryText)
                                 
                             }
@@ -159,7 +160,7 @@ struct CheckoutView: View {
                         HStack {
                             Text("Coupon")
                                 .font(.customfont(.semibold, fontSize: 18))
-                                .foregroundColor(.secondaryText)
+                                .foregroundColor(.black)
                                 .frame(height: 46)
                             
                             Spacer()
@@ -174,7 +175,7 @@ struct CheckoutView: View {
                             Image("next")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 17, height: 17)
                                 .foregroundColor(.primaryText)
                             
                         }
@@ -183,35 +184,35 @@ struct CheckoutView: View {
                     Divider()
                 }
                 
-                VStack{
+                VStack(spacing:2){
                     HStack {
-                        Text("Totat")
+                        Text("Total")
                             .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                         
                         Spacer()
                         
                         Text("$ \(cartVM.total)")
                             .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                     }
                     
                     HStack {
                         Text("Delivery Cost")
                             .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                         
                         Spacer()
                         
                         Text("+ $ \(cartVM.deliverPriceAmount)")
                             .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                     }
                     
                     HStack {
                         Text("Discount")
                             .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(.black)
                         
                         Spacer()
                         
@@ -226,8 +227,8 @@ struct CheckoutView: View {
                 
                 HStack {
                     Text("Final Total")
-                        .font(.customfont(.semibold, fontSize: 18))
-                        .foregroundColor(.secondaryText)
+                        .font(.customfont(.bold, fontSize: 18))
+                        .foregroundColor(Color(hex: "#8349D0"))
                         .frame(height: 46)
                     
                     Spacer()
@@ -242,13 +243,13 @@ struct CheckoutView: View {
                     Image("next")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 20, height: 20)
+                        .frame(width: 17, height: 17)
                         .foregroundColor(.primaryText)
                     
                 }
                 Divider()
                 
-                VStack {
+                VStack(){
                     Text("By continuing you agree to our")
                         .font(.customfont(.semibold, fontSize: 14))
                         .foregroundColor(.secondaryText)
@@ -272,9 +273,13 @@ struct CheckoutView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
                     }
+                   
                     
                 }
+                //.frame(alignment: .center)
                 .padding(.vertical, .screenWidth * 0.03)
+                .padding(.bottom, 10)
+                
               
                 RoundButton(title: "Place Order") {
                        cartVM.serviceCallOrderPlace()

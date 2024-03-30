@@ -25,10 +25,10 @@ struct PaymentMethodsView: View {
                         
                         HStack(spacing: 15) {
                                 
-                            Image("paymenth_methods")
+                            Image("mobile")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 35, height: 35)
+                                .frame(width: 45, height: 45)
                             
                             VStack(spacing: 4){
                                 Text(pObj.name)
@@ -58,7 +58,7 @@ struct PaymentMethodsView: View {
                         
                         .background(Color.white)
                         .cornerRadius(5)
-                        .shadow(color: Color.black.opacity(0.15), radius: 2)
+                        .shadow(color: Color(hex: "#8349D0").opacity(1), radius: 2)
                         .onTapGesture {
                             if(isPicker) {
                                 mode.wrappedValue.dismiss()

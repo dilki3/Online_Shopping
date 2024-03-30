@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct Links {
-    static let AppName = "Online Shopping"
+    static let AppName = "Shopix"
     
     static let BASE_URL = "http://localhost:3001/api/app/"
     

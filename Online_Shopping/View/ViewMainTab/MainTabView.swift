@@ -46,7 +46,7 @@ struct MainTabView: View {
                         
                        
                     }
-                    TabButton(title: "Explore", icon: "explore_tab", isSelect: homeVM.selectTab == 1) {
+                    TabButton(title: "Find", icon: "explore_tab", isSelect: homeVM.selectTab == 1) {
                         DispatchQueue.main.async {
                              
                             withAnimation {

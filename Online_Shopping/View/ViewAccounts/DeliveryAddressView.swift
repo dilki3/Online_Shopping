@@ -26,18 +26,12 @@ struct DeliveryAddressView: View {
                             VStack{
                                 HStack {
                                     Text(aObj.name)
-                                        .font(.customfont(.bold, fontSize: 14))
-                                        .foregroundColor(.primaryText)
+                                        .font(.customfont(.bold, fontSize: 16))
+                                        .foregroundColor(Color(hex: "#8349D0"))
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                     
                                     
-                                    Text(aObj.typeName)
-                                        .font(.customfont(.bold, fontSize: 12))
-                                        .foregroundColor(.primaryText)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 2)
-                                        .background(Color.secondaryText.opacity(0.3))
-                                        .cornerRadius(5)
+                                  
                                 }
                                 
                                 Text("\(aObj.address),\(aObj.city), \(aObj.state), \(aObj.postalCode) ")
@@ -61,33 +55,35 @@ struct DeliveryAddressView: View {
                                 NavigationLink {
                                     AddDeliveryAddressView(isEdit: true, editObj: aObj  )
                                 } label: {
-                                    Image(systemName: "pencil")
+                                    Image("editing")
                                         .resizable()
-                                        .frame(width: 20 ,height: 20)
+                                        .frame(width: 19 ,height: 19)
                                         .foregroundColor(.primaryApp)
                                 }
-                                .padding(.bottom, 10)
-
-                               
+                                .padding(.bottom, 15)
+                                
+                                
                                 
                                 Button {
                                     addressVM.serviceCallRemove(cObj: aObj)
                                 } label: {
                                     Image("close")
                                         .resizable()
-                                        
+                                    
                                         .scaledToFit()
                                         .frame(width: 15, height: 15)
                                 }
                                 
                                 Spacer()
-
+                                
                             }
                         }
+
                         .padding(15)
                         .background(Color.white)
                         .cornerRadius(5)
-                        .shadow(color: Color.black.opacity(0.15), radius: 2)
+                        //.stroke(Color(hex: "#8349D0"), lineWidth: 1)
+                        .shadow(color: Color(hex: "#8349D0").opacity(1), radius: 2)
                         .onTapGesture {
                             if(isPicker) {
                                 mode.wrappedValue.dismiss()
@@ -101,9 +97,10 @@ struct DeliveryAddressView: View {
                 .padding(20)
                 .padding(.top, .topInsets + 46)
                 .padding(.bottom, .bottomInsets + 60)
+        
+
 
             }
-            
             
             VStack {
                     
