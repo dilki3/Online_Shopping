@@ -41,15 +41,8 @@ struct MyOrdersView: View {
                                     Text(getOrderStatus(mObj: myObj))
                                         .font(.customfont(.bold, fontSize: 16))
                                         .foregroundColor( getOrderStatusColor(mObj: myObj) )
-                                        
+                                    
                                 }
-                                
-                                Text(myObj.createdDate.displayDate(format: "yyyy-MM-dd hh:mm a"))
-                                    .font(.customfont(.bold, fontSize: 12))
-                                    .foregroundColor(.secondaryText)
-                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                
-                                
                                 
                                 HStack {
                                     
