@@ -34,7 +34,8 @@ struct SignInView: View {
                     
                 VStack(alignment: .leading){
                     Text( "Get your Favorite Items with Shopix ")
-                        .font(.customfont(.bold, fontSize: 30))
+                        //.font(.customfont(.bold, fontSize: 30))
+                        .font(.system(size:30,weight: .bold))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
                         .padding(.bottom , 25)
