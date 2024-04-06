@@ -28,7 +28,7 @@ struct CountryPickerUI: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> some CountryPickerViewController {
         
         let countryPicker = CountryPickerViewController()
-        countryPicker.selectedCountry  = "IN"
+        countryPicker.selectedCountry  = "SL"
         countryPicker.delegate = context.coordinator
         
         return countryPicker

@@ -21,7 +21,7 @@ struct MyDetailsView: View {
                 VStack(spacing: 15){
                     
                     
-                    LineTextField(title: "Name", placholder: "Enter you name" , txt: $myVM.txtName)
+                    LineTextField(title: "Name", placholder: "Enter you name" , txt: $myVM.txtUsername)
                     
                     
                     VStack {
@@ -79,7 +79,7 @@ struct MyDetailsView: View {
                                 .padding()
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color.primaryApp, lineWidth: 1) // Adjust the line width as needed
+                                        .stroke(Color.primaryApp, lineWidth: 1)
                                 )
                     }
 
