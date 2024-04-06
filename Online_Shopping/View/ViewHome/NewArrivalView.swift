@@ -56,7 +56,7 @@ struct NewArrivalView: View {
                 ScrollView {
                     LazyVGrid(columns: columns,spacing: 15) {
                         
-                        ForEach(homeVM.bestArr, id: \.id){
+                        ForEach(homeVM.newArr, id: \.id){
                             pObj in
                             
                             ProductCell(pObj:pObj, didAddCart: {

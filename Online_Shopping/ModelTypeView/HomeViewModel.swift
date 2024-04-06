@@ -21,7 +21,7 @@ class HomeViewModel: ObservableObject
     @Published var errorMessage = ""
     
     @Published var offerArr: [ProductModel] = []
-    @Published var bestArr: [ProductModel] = []
+    @Published var newArr: [ProductModel] = []
     @Published var listArr: [ProductModel] = []
     @Published var typeArr: [TypeModel] = []
     
@@ -45,7 +45,7 @@ class HomeViewModel: ObservableObject
                             return ProductModel(dict: obj as? NSDictionary ?? [:])
                         })
                         
-                        self.bestArr = (payloadObj.value(forKey: "best_sell_list") as? NSArray ?? []).map({ obj in
+                        self.newArr = (payloadObj.value(forKey: "new_arrival_list") as? NSArray ?? []).map({ obj in
                             
                             return ProductModel(dict: obj as? NSDictionary ?? [:])
                         })
@@ -85,9 +85,9 @@ class HomeViewModel: ObservableObject
         
     func filterByPriceNew(ascending: Bool) {
             if ascending {
-                bestArr.sort { $0.price < $1.price }
+                newArr.sort { $0.price < $1.price }
             } else {
-                bestArr.sort { $0.price > $1.price }
+                newArr.sort { $0.price > $1.price }
             }
         }
     
